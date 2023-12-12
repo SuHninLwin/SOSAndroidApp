@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Sending SMS To Default Number</string>
+    <string name="send_now">Send now!</string>
+    <string name="aspc_system">ASPC System</string>
+    <string name="developed_by_su_hnin_lwin_batch_29_software">Developed By Su Hnin Lwin (Batch-29 Software)</string>
+</resources>

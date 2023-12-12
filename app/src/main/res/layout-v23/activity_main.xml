@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonMsg"
+        android:layout_width="1000dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="18dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onSend"
+        app:backgroundTint="#3d3e40"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/sym_action_chat" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="313dp"
+        android:layout_height="75dp"
+        android:background="#3d3e40"
+        android:gravity="center"
+        android:paddingLeft="3dp"
+        android:paddingTop="2dp"
+        android:text="Auto SMS and Phone Calling System"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="93dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="26dp"
+        android:background="#FFFFFF"
+        android:foreground="@drawable/logo2"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/textView1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="412dp"
+        android:layout_height="47dp"
+        android:background="#28292A"
+        android:paddingLeft="54dp"
+        android:paddingTop="8dp"
+        android:text="Developed By Su Hnin Lwin (B-29 SW)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#F9F9F9"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="18dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onCall"
+        app:backgroundTint="#3d3e40"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButtonMsg"
+        app:srcCompat="@android:drawable/stat_sys_phone_call" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:layout_marginBottom="18dp"
+        android:clickable="true"
+        android:onClick="onLocation"
+        app:backgroundTint="#3d3e40"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_map" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textLatLong"
+        android:layout_width="328dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:gravity="center"
+        android:textColor="#0F0201"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtongetHelp" />
+
+    <TextView
+        android:id="@+id/textAddress"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:gravity="center"
+        android:textColor="#0F0201"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLatLong" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtongetHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginTop="1dp"
+        android:clickable="true"
+        android:onClick="onGetHelp"
+        app:backgroundTint="#A59F9F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@android:drawable/ic_notification_overlay" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="334dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="93dp"
+        android:gravity="center"
+        android:text="Hold Longer To Get Help!"
+        android:textColor="#0E0D0D"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="240dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="12dp"
+        android:background="#2E2F31"
+        android:paddingLeft="6sp"
+        android:paddingTop="4sp"
+        android:text="Flashlight"
+        android:textColor="#F9F9F9"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <Button
+        android:id="@+id/buttonTorchOn"
+        android:layout_width="60dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:clickable="true"
+        android:onClick="onTorchOn"
+        android:text="On"
+        app:layout_constraintEnd_toStartOf="@+id/buttonTorchOff"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <Button
+        android:id="@+id/buttonTorchOff"
+        android:layout_width="60dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginRight="133dp"
+        android:clickable="true"
+        android:onClick="onTorchOff"
+        android:text="Off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
